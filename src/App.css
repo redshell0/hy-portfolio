@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800");
+
 :root {
   --primary-color: #324679;
   --secondary-color: #ffffff;
@@ -8,6 +10,7 @@
   background-color: var(--primary-color);
   margin: 0;
   padding: 0;
+  font-family: "Nanum Gothic";
 }
 
 body {
@@ -96,3 +99,5 @@ body {
   left: calc(50% - 6px);
   z-index: 100;
 }
+
+@mdeia;
