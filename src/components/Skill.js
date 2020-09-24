@@ -19,8 +19,8 @@ const svgVariants = {
     opacity: 1,
     transition: {
       type: "spring",
-      stiffness: 200,
-      duration: 0.1,
+      stiffness: 100,
+      duration: 0.2,
     },
   },
 };
