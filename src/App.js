@@ -2,6 +2,7 @@ import React from "react";
 
 import Landing from "./components/Landing";
 import Education from "./components/Education";
+import Skills from "./components/Skills";
 
 import "./App.css";
 
@@ -10,6 +11,7 @@ function App() {
     <>
       <Landing />
       <Education />
+      <Skills />
     </>
   );
 }
