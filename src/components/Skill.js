@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import Counter from "../hooks/Counter";
+
 const skillVariants = {
   hidden: { opacicy: 0 },
   visible: {
@@ -25,12 +27,14 @@ const svgVariants = {
   },
 };
 
-const Skill = ({ name, score }) => {
+const Skill = ({ name, score, count }) => {
   const circle = {
     cx: 140,
     cy: 140,
     r: 100,
   };
+
+  const timer = 0.6 + (count + 1) * 0.2;
 
   const dasharray = 2 * Math.PI * circle.r;
   const dashoffset = dasharray - (dasharray * score) / 100;
@@ -49,6 +53,11 @@ const Skill = ({ name, score }) => {
       },
     },
   };
+
+  const duration =
+    svgVariants.visible.transition.duration +
+    skillVariants.visible.transition.duration;
+  // console.log(timer);
 
   return (
     <motion.div className="skill" variants={skillVariants}>
@@ -72,8 +81,7 @@ const Skill = ({ name, score }) => {
         </svg>
         <div className="number">
           <h2>
-            {score}
-            <span>%</span>
+            <Counter valueTo={score} totalDuration={2 + timer + duration} />
           </h2>
         </div>
         <h2 className="text">{name}</h2>
