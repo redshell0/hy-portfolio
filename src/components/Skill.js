@@ -27,7 +27,7 @@ const svgVariants = {
   },
 };
 
-const Skill = ({ name, score, count }) => {
+const Skill = ({ name, score, count, inView }) => {
   const circle = {
     cx: 140,
     cy: 140,
@@ -81,7 +81,11 @@ const Skill = ({ name, score, count }) => {
         </svg>
         <div className="number">
           <h2>
-            <Counter valueTo={score} totalDuration={2 + timer + duration} />
+            <Counter
+              valueTo={score}
+              totalDuration={2 + timer + duration}
+              inView={inView}
+            />
           </h2>
         </div>
         <h2 className="text">{name}</h2>

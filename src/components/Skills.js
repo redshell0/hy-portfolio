@@ -61,7 +61,13 @@ const Skills = () => {
           variants={skillcontinerVariants}
         >
           {skillData.map(({ name, score }, idx) => (
-            <Skill name={name} score={score} key={idx} count={idx} />
+            <Skill
+              name={name}
+              score={score}
+              key={idx}
+              count={idx}
+              inView={inView}
+            />
           ))}
         </motion.div>
       </motion.div>
